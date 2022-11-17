@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		08123530B71574F39C001898 /* Pods_CommonSwift_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F99A0EF7782334E0A636F7EB /* Pods_CommonSwift_Example.framework */; };
+		112E14182926C7BA002A682C /* StringHexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112E14172926C7BA002A682C /* StringHexTests.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		607FACEC1AFB9204008FA782 /* DataHexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* DataHexTests.swift */; };
 		9484C93E483C9487D1A4A6E0 /* Pods_CommonSwift_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24627952D2C336B5EA8BBADD /* Pods_CommonSwift_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		0813FCE7C8A84488E296DDD2 /* CommonSwift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CommonSwift.podspec; path = ../CommonSwift.podspec; sourceTree = "<group>"; };
+		112E14172926C7BA002A682C /* StringHexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringHexTests.swift; sourceTree = "<group>"; };
 		24627952D2C336B5EA8BBADD /* Pods_CommonSwift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CommonSwift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BE280CF1FB60C420B349CDB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		45C0D1623505D21654FC45EE /* Pods-CommonSwift_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommonSwift_Example.release.xcconfig"; path = "Target Support Files/Pods-CommonSwift_Example/Pods-CommonSwift_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -41,7 +43,7 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* CommonSwift_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommonSwift_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		607FACEB1AFB9204008FA782 /* DataHexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHexTests.swift; sourceTree = "<group>"; };
 		7927867D81B740543CD93CC6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		8150FDBBBAC98AD026677791 /* Pods-CommonSwift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommonSwift_Tests.release.xcconfig"; path = "Target Support Files/Pods-CommonSwift_Tests/Pods-CommonSwift_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		A40FE86C7337A3563BA28E76 /* Pods-CommonSwift_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommonSwift_Example.debug.xcconfig"; path = "Target Support Files/Pods-CommonSwift_Example/Pods-CommonSwift_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,7 +128,8 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
+				607FACEB1AFB9204008FA782 /* DataHexTests.swift */,
+				112E14172926C7BA002A682C /* StringHexTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -340,7 +343,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				112E14182926C7BA002A682C /* StringHexTests.swift in Sources */,
+				607FACEC1AFB9204008FA782 /* DataHexTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
