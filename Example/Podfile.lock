@@ -1,5 +1,5 @@
 PODS:
-  - CommonSwift (0.1.0)
+  - CommonSwift (1.0.0)
 
 DEPENDENCIES:
   - CommonSwift (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CommonSwift: 43be7d8f0821d44b6f0b716e9dcbeb3b055e72a3
+  CommonSwift: 23d17f532213bc95f456f7b1546ac74963793fdf
 
 PODFILE CHECKSUM: 45c6798824f96712eaef9d8cc3b0bb4c8c0f43b8
 
