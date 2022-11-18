@@ -22,7 +22,7 @@ pod 'CommonSwift'
 
 ## Author
 
-TigranIsk, tiskandaryan@griddynamics.com
+Tigran Iskandaryan, tiger@sublab.dev
 
 ## License
 
