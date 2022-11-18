@@ -26,4 +26,4 @@ Tigran Iskandaryan, tiger@sublab.dev
 
 ## License
 
-CommonSwift is available under the MIT license. See the LICENSE file for more info.
+CommonSwift is available under the Apache 2.0 license. See the LICENSE file for more info.
