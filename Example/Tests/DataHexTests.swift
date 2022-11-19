@@ -11,7 +11,7 @@ class DataHexTests: XCTestCase {
             return
         }
         
-        let result = data.hexadecimal
-        XCTAssertEqual(result, expectedHex)
+        let encoded = data.hex.encode()
+        XCTAssertEqual(encoded, expectedHex)
     }
 }
