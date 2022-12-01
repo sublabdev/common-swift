@@ -1,7 +1,7 @@
 import Foundation
 import BigInt
 
-public struct UInt512 {
+public struct UInt512: Codable {
     let value: BigUInt
     public static let size = 64
 }
