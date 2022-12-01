@@ -28,3 +28,9 @@ public class StringHex {
         return newData
     }
 }
+
+public extension String {
+    var hex: StringHex {
+        .init(string: self)
+    }
+}

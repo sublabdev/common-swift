@@ -26,12 +26,10 @@
 		73E1178AD16F91C80A718FB778F3534A /* Strideable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEA896AB210B97BD868FD6C04EFA831 /* Strideable.swift */; };
 		77651F160816E699EC490DD9D3F9BE02 /* Shifts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ACE00CCD056C20D1BB7F94A3DC5E11 /* Shifts.swift */; };
 		81DEE0975FD2488D5C61D099F17DC3FA /* BigInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = D295DBF64DC93E26BFEA6565901E0A12 /* BigInt.swift */; };
-		86752F178EE2D4A253753F83549C993C /* Data+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F92242E2E00427A3CE077F8E09ED616 /* Data+Hex.swift */; };
 		97AFCA106613EAB2BF6A4A26B13A5945 /* DataHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEA3513120D3BFF92EC4D7B86233AD6 /* DataHex.swift */; };
 		A81F5E7AC6A31EA09FB5B0CD5ECBA22E /* Exponentiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7728A2CD9AA973F06CD7F07BE1D052 /* Exponentiation.swift */; };
 		ABFE51CB471DDA9CBABDB10761ED1C32 /* UInt128.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E49441546CBCBA268A49D1683165C4F /* UInt128.swift */; };
 		B75D369E494B199379FB06354D317FC1 /* CommonSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 888A4808B29A205C4B03565015F54758 /* CommonSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B93C4379F77DD59AC3D7BB263486B721 /* String+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBC8988E906C8DF66F942CD52BD7366 /* String+Hex.swift */; };
 		B96BCDA4AF618BF171AA502CC84FCD8F /* Data Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466D8EDB2105060876C76BC168C1D9A9 /* Data Conversion.swift */; };
 		BEC0B76176156C3AA342B94588FBB4D9 /* Int128.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528A05A52D4CB0334FDC126EFFC35051 /* Int128.swift */; };
 		CBC2CC340CD4CFCD60F9A30BC9E0955C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
@@ -117,7 +115,6 @@
 		6786DC739597A15ACAFC770446BD7B57 /* Bitwise Ops.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Bitwise Ops.swift"; path = "Sources/Bitwise Ops.swift"; sourceTree = "<group>"; };
 		69CA2DDD8A5B24672E2F2958D6ABDA10 /* CommonSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CommonSwift-Info.plist"; sourceTree = "<group>"; };
 		6E49441546CBCBA268A49D1683165C4F /* UInt128.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UInt128.swift; sourceTree = "<group>"; };
-		6F92242E2E00427A3CE077F8E09ED616 /* Data+Hex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Data+Hex.swift"; sourceTree = "<group>"; };
 		6FF2D6250A5D0303B688B4E82C2D50EB /* Pods-CommonSwift_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CommonSwift_Example-Info.plist"; sourceTree = "<group>"; };
 		7115BDEEEEC20B167D8C2DAD343DD502 /* Int512.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Int512.swift; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -128,17 +125,16 @@
 		7E6DD6C0A3208287CBFAD49A720A45C5 /* Words and Bits.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Words and Bits.swift"; path = "Sources/Words and Bits.swift"; sourceTree = "<group>"; };
 		7FAEB5461A322FDFCF57C987FC160315 /* Pods-CommonSwift_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-CommonSwift_Tests"; path = Pods_CommonSwift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8147406DE59C0AB30612B9D6E181F00B /* CommonSwift */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CommonSwift; path = CommonSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		830EF057A5740A19EC32E326848DCD1F /* CommonSwift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = CommonSwift.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		861D027FC121AE9967EFDBE0AFDD1AD2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		830EF057A5740A19EC32E326848DCD1F /* CommonSwift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = CommonSwift.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		861D027FC121AE9967EFDBE0AFDD1AD2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		888A4808B29A205C4B03565015F54758 /* CommonSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CommonSwift-umbrella.h"; sourceTree = "<group>"; };
 		8A55F1FD9FB05F72699586B50B91A969 /* GCD.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GCD.swift; path = Sources/GCD.swift; sourceTree = "<group>"; };
-		8BBC8988E906C8DF66F942CD52BD7366 /* String+Hex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+Hex.swift"; sourceTree = "<group>"; };
 		8C790681494CDC322851D2E191A8045B /* BigInt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BigInt.debug.xcconfig; sourceTree = "<group>"; };
 		91BB24BA472AF523E913108C9AA301F2 /* BigInt */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BigInt; path = BigInt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94B64ABCCBE236A9ECAF99111679E5D3 /* Integer Conversion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Integer Conversion.swift"; path = "Sources/Integer Conversion.swift"; sourceTree = "<group>"; };
 		94CE48A2A90896D7CB4129863BEFCB89 /* Pods-CommonSwift_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-CommonSwift_Example"; path = Pods_CommonSwift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A32D8F5937203751942B84436F0134B /* Subtraction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Subtraction.swift; path = Sources/Subtraction.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A0D4982C56130D98A2EE44C487686DF1 /* Pods-CommonSwift_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CommonSwift_Example-dummy.m"; sourceTree = "<group>"; };
 		A37D3AD27CCE751F6D63FB7F87163613 /* Hashable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Hashable.swift; path = Sources/Hashable.swift; sourceTree = "<group>"; };
 		A84D3EFC3A2E86784C365A6EE62B84DD /* CommonSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CommonSwift.modulemap; sourceTree = "<group>"; };
@@ -152,7 +148,7 @@
 		DBB48582DFDFEA826F62F8BC4154AE83 /* Pods-CommonSwift_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CommonSwift_Example.release.xcconfig"; sourceTree = "<group>"; };
 		DCD991FAECAA5F57F75CC2C7C8A2F72A /* Pods-CommonSwift_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CommonSwift_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E1E61FC2BDAE799C8D330239D18FF574 /* Addition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Addition.swift; path = Sources/Addition.swift; sourceTree = "<group>"; };
-		E6C69E86ED7929B63FB7D9BA505724C3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		E6C69E86ED7929B63FB7D9BA505724C3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		EA6377F6A52D57630522D67863CC476A /* BigUInt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BigUInt.swift; path = Sources/BigUInt.swift; sourceTree = "<group>"; };
 		EF5263FD0636A0D234DF68B85EB7B8A8 /* Prime Test.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Prime Test.swift"; path = "Sources/Prime Test.swift"; sourceTree = "<group>"; };
 		F1DE91EE40F6A307E9D2EA24121006E8 /* Pods-CommonSwift_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CommonSwift_Example-umbrella.h"; sourceTree = "<group>"; };
@@ -225,8 +221,6 @@
 			isa = PBXGroup;
 			children = (
 				34DE8D7F81AACA42A2738AE9BA8E1795 /* Data+Copy.swift */,
-				6F92242E2E00427A3CE077F8E09ED616 /* Data+Hex.swift */,
-				8BBC8988E906C8DF66F942CD52BD7366 /* String+Hex.swift */,
 			);
 			name = Extensions;
 			path = CommonSwift/Classes/Extensions;
@@ -315,7 +309,6 @@
 				7E6DD6C0A3208287CBFAD49A720A45C5 /* Words and Bits.swift */,
 				DFE9F4269B17EF9A985AAB93610874CA /* Support Files */,
 			);
-			name = BigInt;
 			path = BigInt;
 			sourceTree = "<group>";
 		};
@@ -406,7 +399,6 @@
 			children = (
 				202BDC843EB07635350985AF46DDDE54 /* ByteSize.swift */,
 			);
-			name = Helpers;
 			path = Helpers;
 			sourceTree = "<group>";
 		};
@@ -654,12 +646,10 @@
 				F2943B8CEAD7FE95FFA2C0065E1C1304 /* ByteSize.swift in Sources */,
 				F7D18E1B45C80DA03792660C0133EFC4 /* CommonSwift-dummy.m in Sources */,
 				399CC2B1EA77E7E9551A01C8855A5DF6 /* Data+Copy.swift in Sources */,
-				86752F178EE2D4A253753F83549C993C /* Data+Hex.swift in Sources */,
 				97AFCA106613EAB2BF6A4A26B13A5945 /* DataHex.swift in Sources */,
 				BEC0B76176156C3AA342B94588FBB4D9 /* Int128.swift in Sources */,
 				D62A789020BDE8994521E0B666D8998C /* Int256.swift in Sources */,
 				16CF4EC2C4097F705551A35F3FC84548 /* Int512.swift in Sources */,
-				B93C4379F77DD59AC3D7BB263486B721 /* String+Hex.swift in Sources */,
 				F55F6432F11BD9DA4F35896652D91571 /* StringHex.swift in Sources */,
 				ABFE51CB471DDA9CBABDB10761ED1C32 /* UInt128.swift in Sources */,
 				F28A06C6885D7B365FCDA7A63CB2CC5E /* UInt256.swift in Sources */,
@@ -986,8 +976,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
