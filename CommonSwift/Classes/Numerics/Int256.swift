@@ -1,7 +1,7 @@
 import Foundation
 import BigInt
 
-public struct Int256: Codable {
+public struct Int256: Codable, Equatable {
     let value: BigInt
     public static let size = 32
 }
