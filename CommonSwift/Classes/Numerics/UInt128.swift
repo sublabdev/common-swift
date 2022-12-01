@@ -4,6 +4,10 @@ import BigInt
 public struct UInt128: Codable, Equatable {
     let value: BigUInt
     public static let size = 16
+    
+    public init(value: BigUInt) {
+        self.value = value
+    }
 }
 
 extension UInt128 {
