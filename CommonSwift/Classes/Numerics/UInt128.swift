@@ -3,7 +3,7 @@ import BigInt
 
 public struct UInt128 {
     let value: BigUInt
-    static let size = 16
+    public static let size = 16
 }
 
 extension UInt128 {
