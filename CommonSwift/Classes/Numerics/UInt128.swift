@@ -12,6 +12,21 @@ public struct UInt128: Codable, Equatable {
     public init(value: BigUInt) {
         self.value = value
     }
+    
+    /// Creates UInt128 wrapper over BigInt using `String`. This initializer can fail.
+    /// - Parameters:
+    ///     - string: A `String` value
+    public init?(_ string: String) {
+        guard let value = BigUInt(string) else { return nil }
+        self.value = value
+    }
+    
+    /// Creates UInt128 wrapper over BigInt using `UInt64`
+    /// - Parameters:
+    ///     - string: An `UInt64` value
+    public init(_ integer: UInt64) {
+        value = BigUInt(integerLiteral: integer)
+    }
 }
 
 extension UInt128 {
@@ -27,5 +42,13 @@ extension Data {
     /// - Returns: UInt128 from Data
     public func uInt128() -> UInt128 {
         UInt128(value: BigUInt(self))
+    }
+}
+
+extension String {
+    /// Generates `UInt128` from `String`
+    /// - Returns: `UInt128` from `String`
+    public func uInt128() -> UInt128? {
+        UInt128(self)
     }
 }

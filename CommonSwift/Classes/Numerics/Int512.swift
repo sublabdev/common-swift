@@ -12,6 +12,21 @@ public struct Int512: Codable, Equatable {
     public init(value: BigInt) {
         self.value = value
     }
+    
+    /// Creates Int512 wrapper over BigInt using `String`. This initializer can fail.
+    /// - Parameters:
+    ///     - string: A `String` value
+    public init?(_ string: String) {
+        guard let value = BigInt(string) else { return nil }
+        self.value = value
+    }
+    
+    /// Creates Int512 wrapper over BigInt using `Int64`
+    /// - Parameters:
+    ///     - string: An `Int64` value
+    public init(_ integer: Int64) {
+        value = BigInt(integerLiteral: integer)
+    }
 }
 
 extension Int512 {
@@ -27,5 +42,13 @@ extension Data {
     /// - Returns: Int512 from Data
     public func int512() -> Int512 {
         Int512(value: BigInt(self))
+    }
+}
+
+extension String {
+    /// Generates `Int512` from `String`
+    /// - Returns: `Int512` from `String`
+    public func int512() -> Int512? {
+        Int512(self)
     }
 }

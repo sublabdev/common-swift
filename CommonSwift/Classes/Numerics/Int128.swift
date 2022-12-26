@@ -12,6 +12,21 @@ public struct Int128: Codable, Equatable {
     public init(value: BigInt) {
         self.value = value
     }
+    
+    /// Creates Int128 wrapper over BigInt using `String`. This initializer can fail.
+    /// - Parameters:
+    ///     - string: A `String` value
+    public init?(_ string: String) {
+        guard let value = BigInt(string) else { return nil }
+        self.value = value
+    }
+    
+    /// Creates Int128 wrapper over BigInt using `Int64`
+    /// - Parameters:
+    ///     - string: An `Int64` value
+    public init(_ integer: Int64) {
+        value = BigInt(integerLiteral: integer)
+    }
 }
 
 extension Int128 {
@@ -23,9 +38,17 @@ extension Int128 {
 }
 
 extension Data {
-    /// Generates Int128 from Data
-    /// - Returns: Int128 from Data
+    /// Generates `Int128` from `Data`
+    /// - Returns: `Int128` from `Data`
     public func int128() -> Int128 {
         Int128(value: BigInt(self))
+    }
+}
+
+extension String {
+    /// Generates `Int128` from `String`
+    /// - Returns: `Int128` from `String`
+    public func int128() -> Int128? {
+        Int128(self)
     }
 }
