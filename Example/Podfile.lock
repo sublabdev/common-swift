@@ -2,11 +2,10 @@ PODS:
   - BigInt (3.1.0):
     - SipHash (~> 1.2)
   - CommonSwift (1.0.0):
-    - BigInt
+    - BigInt (~> 3.1)
   - SipHash (1.2.2)
 
 DEPENDENCIES:
-  - BigInt (~> 3.1)
   - CommonSwift (from `../`)
 
 SPEC REPOS:
@@ -20,9 +19,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   BigInt: 76b5dfdfa3e2e478d4ffdf161aeede5502e2742f
-  CommonSwift: 74d8b4fb289ee38027278d41d84bfac3843da660
+  CommonSwift: c524530c8e1a212078aa5cea86205188b476d760
   SipHash: fad90a4683e420c52ef28063063dbbce248ea6d4
 
-PODFILE CHECKSUM: 11745c9908ffde030fa93df9eca08696dfc887c1
+PODFILE CHECKSUM: dba4558125af06e4ee9d9af5bb563c7a29195b18
 
 COCOAPODS: 1.11.3
