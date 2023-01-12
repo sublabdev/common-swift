@@ -4,6 +4,7 @@ platform :ios, '13.0'
 
 target 'CommonSwift_Example' do
   pod 'CommonSwift', :path => '../'
+  pod 'BigInt', '~> 5.2.0'
 
   target 'CommonSwift_Tests' do
     inherit! :search_paths
