@@ -1,9 +1,7 @@
 PODS:
-  - BigInt (3.1.0):
-    - SipHash (~> 1.2)
+  - BigInt (5.0.0)
   - CommonSwift (1.0.0):
-    - BigInt (~> 3.1)
-  - SipHash (1.2.2)
+    - BigInt (~> 5.0.0)
 
 DEPENDENCIES:
   - CommonSwift (from `../`)
@@ -11,16 +9,14 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - BigInt
-    - SipHash
 
 EXTERNAL SOURCES:
   CommonSwift:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BigInt: 76b5dfdfa3e2e478d4ffdf161aeede5502e2742f
-  CommonSwift: c524530c8e1a212078aa5cea86205188b476d760
-  SipHash: fad90a4683e420c52ef28063063dbbce248ea6d4
+  BigInt: 74b4d88367b0e819d9f77393549226d36faeb0d8
+  CommonSwift: ad350f0e06c040e5cb660cd7154f947851c73fbd
 
 PODFILE CHECKSUM: dba4558125af06e4ee9d9af5bb563c7a29195b18
 

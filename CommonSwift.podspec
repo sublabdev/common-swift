@@ -13,5 +13,5 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/sublabdev/common-swift.git', :tag => s.version.to_s }
   s.ios.deployment_target = '13.0'
   s.source_files = 'CommonSwift/Classes/**/*'
-  s.dependency 'BigInt', '~> 3.1'
+  s.dependency 'BigInt', '~> 5.0.0'
 end
