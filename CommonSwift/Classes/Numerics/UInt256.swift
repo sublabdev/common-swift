@@ -33,7 +33,9 @@ extension UInt256 {
     /// Converts `UInt256` into `Data`
     /// - Returns: `Data` from `UInt256`'s value
     public func data() -> Data {
-        value.serialize().copyOf(size: byteSize(byteSizeType: .uInt256))
+        let data = value.serialize()
+        let exportSize = min(data.count, byteSize(byteSizeType: .uInt256))
+        return data.copyOf(size: exportSize).reversed().toData()
     }
 }
 
@@ -41,7 +43,7 @@ extension Data {
     /// Generates `UInt256` from `Data`
     /// - Returns: `UInt256` from `Data`
     public func uInt256() -> UInt256 {
-        UInt256(value: BigUInt(self))
+        UInt256(value: BigUInt(reversed().toData()))
     }
 }
 

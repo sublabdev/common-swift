@@ -33,7 +33,9 @@ extension UInt512 {
     /// Converts `UInt512` into `Data`
     /// - Returns: `Data` from `UInt512`'s value
     public func data() -> Data {
-        value.serialize().copyOf(size: byteSize(byteSizeType: .uInt512))
+        let data = value.serialize()
+        let exportSize = min(data.count, byteSize(byteSizeType: .uInt512))
+        return data.copyOf(size: exportSize).reversed().toData()
     }
 }
 
@@ -41,7 +43,7 @@ extension Data {
     /// Generates `UInt512` from `Data`
     /// - Returns: `UInt512` from `Data`
     public func uInt512() -> UInt512 {
-        UInt512(value: BigUInt(self))
+        UInt512(value: BigUInt(reversed().toData()))
     }
 }
 

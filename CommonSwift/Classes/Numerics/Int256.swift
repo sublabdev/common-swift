@@ -33,7 +33,9 @@ extension Int256 {
     /// Converts `Int256` into `Data`
     /// - Returns: `Data` from `Int256`'s value
     public func data() -> Data {
-        value.serialize().copyOf(size: byteSize(byteSizeType: .int256))
+        let data = value.serialize()
+        let exportSize = min(data.count, byteSize(byteSizeType: .int256))
+        return data.copyOf(size: exportSize).reversed().toData()
     }
 }
 
@@ -41,7 +43,7 @@ extension Data {
     /// Generates `Int256` from `Data`
     /// - Returns: `Int256` from `Data`
     public func int256() -> Int256 {
-        Int256(value: BigInt(self))
+        Int256(value: BigInt(reversed().toData()))
     }
 }
 

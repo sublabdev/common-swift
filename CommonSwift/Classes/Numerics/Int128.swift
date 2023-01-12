@@ -33,7 +33,9 @@ extension Int128 {
     /// Converts `Int128` into `Data`
     /// - Returns: `Data` from `Int128`'s value
     public func data() -> Data {
-        value.serialize().copyOf(size: byteSize(byteSizeType: .int128))
+        let data = value.serialize()
+        let exportSize = min(data.count, byteSize(byteSizeType: .int128))
+        return data.copyOf(size: exportSize).reversed().toData()
     }
 }
 
@@ -41,7 +43,7 @@ extension Data {
     /// Generates `Int128` from `Data`
     /// - Returns: `Int128` from `Data`
     public func int128() -> Int128 {
-        Int128(value: BigInt(self))
+        Int128(value: BigInt(reversed().toData()))
     }
 }
 

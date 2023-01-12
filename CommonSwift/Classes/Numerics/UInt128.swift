@@ -31,9 +31,11 @@ public struct UInt128: Codable, Equatable {
 
 extension UInt128 {
     /// Converts `UInt128` into `Data`
-    /// - Returns: Data from `UInt128`'s value
+    /// - Returns: `Data` from `UInt128`'s value
     public func data() -> Data {
-        value.serialize().copyOf(size: byteSize(byteSizeType: .uInt128))
+        let data = value.serialize()
+        let exportSize = min(data.count, byteSize(byteSizeType: .uInt128))
+        return data.copyOf(size: exportSize).reversed().toData()
     }
 }
 
@@ -41,7 +43,7 @@ extension Data {
     /// Generates `UInt128` from `Data`
     /// - Returns: `UInt128` from `Data`
     public func uInt128() -> UInt128 {
-        UInt128(value: BigUInt(self))
+        UInt128(value: BigUInt(reversed().toData()))
     }
 }
 

@@ -1,7 +1,7 @@
 import Foundation
 
 extension ReversedCollection<Data> {
-    func toData() -> Data {
+    public func toData() -> Data {
         Data(self)
     }
 }
