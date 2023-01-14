@@ -3,6 +3,11 @@ import Foundation
 
 /// A hex-encoded String to Data converter object
 public class StringHex {
+    enum Error: Swift.Error {
+        case hexLengthInvalid
+        case hexSymbolInvalid
+    }
+    
     private let string: String
     
     /// Creates a hex-encoded String to Data converter object
@@ -14,11 +19,11 @@ public class StringHex {
     
     /// Converts hex-encoded String into Data
     /// - Returns: Optional Data converted from hex-encoded String
-    public func decode() -> Data? {
+    public func decode() throws -> Data {
         let hexString = string.dropFirst(string.hasPrefix("0x") ? 2 : 0)
         
         guard hexString.count % 2 == 0 else {
-            return nil
+            throw Error.hexLengthInvalid
         }
         
         var newData = Data(capacity: hexString.count/2)
@@ -27,7 +32,9 @@ public class StringHex {
         for i in hexString.indices {
             if indexIsEven {
                 let byteRange = i...hexString.index(after: i)
-                guard let byte = UInt8(hexString[byteRange], radix: 16) else { return nil }
+                guard let byte = UInt8(hexString[byteRange], radix: 16) else {
+                    throw Error.hexSymbolInvalid
+                }
                 newData.append(byte)
             }
             indexIsEven.toggle()
