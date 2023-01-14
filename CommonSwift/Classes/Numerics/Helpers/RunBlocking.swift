@@ -1,12 +1,12 @@
 // from https://gist.github.com/sainecy/4366a1b99c7317fac63bfeb19d1cfab2
 import Foundation
 
-private final class RunBlocking<T, Failure: Error> {
+public final class RunBlocking<T, Failure: Error> {
     fileprivate var value: Result<T, Failure>? = nil
 }
 
 extension RunBlocking where Failure == Never {
-    func runBlocking(_ operation: @Sendable @escaping () async -> T) -> T {
+    public func runBlocking(_ operation: @Sendable @escaping () async -> T) -> T {
         Task {
             let task = Task(operation: operation)
             self.value = await task.result
@@ -26,7 +26,7 @@ extension RunBlocking where Failure == Never {
 }
 
 extension RunBlocking where Failure == Error {
-    func runBlocking(_ operation: @Sendable @escaping () async throws -> T) throws -> T {
+    public func runBlocking(_ operation: @Sendable @escaping () async throws -> T) throws -> T {
         Task {
             let task = Task(operation: operation)
             value = await task.result
@@ -47,10 +47,10 @@ extension RunBlocking where Failure == Error {
     }
 }
 
-func runBlocking<T>(@_implicitSelfCapture _ operation: @Sendable @escaping () async -> T) -> T {
+public func runBlocking<T>(@_implicitSelfCapture _ operation: @Sendable @escaping () async -> T) -> T {
     RunBlocking().runBlocking(operation)
 }
 
-func runBlocking<T>(@_implicitSelfCapture _ operation: @Sendable @escaping () async throws -> T) throws -> T {
+public func runBlocking<T>(@_implicitSelfCapture _ operation: @Sendable @escaping () async throws -> T) throws -> T {
     try RunBlocking().runBlocking(operation)
 }
