@@ -13,7 +13,7 @@ extension RunBlocking where Failure == Never {
         }
         DispatchQueue.global().sync {
             while value == nil {
-                RunLoop.current.run(mode: .defaultRunLoopMode, before: .distantFuture)
+                RunLoop.current.run(mode: RunLoop.Mode.default, before: .distantFuture)
             }
         }
         switch value {
@@ -33,7 +33,7 @@ extension RunBlocking where Failure == Error {
         }
         DispatchQueue.global().sync {
             while value == nil {
-                RunLoop.current.run(mode: .defaultRunLoopMode, before: .distantFuture)
+                RunLoop.current.run(mode: RunLoop.Mode.default, before: .distantFuture)
             }
         }
         switch value {
