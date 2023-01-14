@@ -1,4 +1,4 @@
-// from https://gist.github.com/sainecy/4366a1b99c7317fac63bfeb19d1cfab2
+// Modified, taken from https://gist.github.com/sainecy/4366a1b99c7317fac63bfeb19d1cfab2
 import Foundation
 
 public final class RunBlocking<T, Failure: Error> {
@@ -7,15 +7,14 @@ public final class RunBlocking<T, Failure: Error> {
 
 extension RunBlocking where Failure == Never {
     public func runBlocking(_ operation: @Sendable @escaping () async -> T) -> T {
-        Task {
-            let task = Task(operation: operation)
-            self.value = await task.result
-        }
-        DispatchQueue.global().sync {
-            while value == nil {
-                RunLoop.current.run(mode: RunLoop.Mode.default, before: .distantFuture)
+        let semaphore = DispatchSemaphore(value: 0)
+        DispatchQueue.global(qos: .background).async {
+            Task {
+                self.value = await Task(operation: operation).result
+                semaphore.signal()
             }
         }
+        semaphore.wait()
         switch value {
         case let .success(value):
             return value
@@ -27,15 +26,14 @@ extension RunBlocking where Failure == Never {
 
 extension RunBlocking where Failure == Error {
     public func runBlocking(_ operation: @Sendable @escaping () async throws -> T) throws -> T {
-        Task {
-            let task = Task(operation: operation)
-            value = await task.result
-        }
-        DispatchQueue.global().sync {
-            while value == nil {
-                RunLoop.current.run(mode: RunLoop.Mode.default, before: .distantFuture)
+        let semaphore = DispatchSemaphore(value: 0)
+        DispatchQueue.global(qos: .background).async {
+            Task {
+                self.value = await Task(operation: operation).result
+                semaphore.signal()
             }
         }
+        semaphore.wait()
         switch value {
         case let .success(value):
             return value
