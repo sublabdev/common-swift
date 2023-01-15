@@ -19,7 +19,6 @@
 import Foundation
 
 extension Data {
-    
     /// The `Data` with zeroes removed at the end if needed
     public var removingZeroesAtEnd: Data {
         guard let offset = lastIndex(where: { $0 > 0 }) else {
