@@ -16,16 +16,20 @@
  * 
  */
 
-import UIKit
+import XCTest
+import CommonSwift
 
-class ViewController: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+class DataHexTests: XCTestCase {
+    func testHexStringFromData() {
+        let testString = "Some String"
+        let expectedHex = "536f6d6520537472696e67"
+        
+        guard let data = testString.data(using: .utf8) else {
+            XCTFail()
+            return
+        }
+        
+        let encoded = data.hex.encode()
+        XCTAssertEqual(encoded, expectedHex)
     }
 }

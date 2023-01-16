@@ -1,16 +1,23 @@
 PODS:
-  - CommonSwift (0.1.0)
+  - BigInt (5.0.0)
+  - CommonSwift (1.0.0):
+    - BigInt (~> 5.0.0)
 
 DEPENDENCIES:
   - CommonSwift (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - BigInt
 
 EXTERNAL SOURCES:
   CommonSwift:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CommonSwift: 43be7d8f0821d44b6f0b716e9dcbeb3b055e72a3
+  BigInt: 74b4d88367b0e819d9f77393549226d36faeb0d8
+  CommonSwift: 65c577c1b0ce5f9063ecbddff2bfeef4f279de61
 
-PODFILE CHECKSUM: 45c6798824f96712eaef9d8cc3b0bb4c8c0f43b8
+PODFILE CHECKSUM: dba4558125af06e4ee9d9af5bb563c7a29195b18
 
 COCOAPODS: 1.11.3

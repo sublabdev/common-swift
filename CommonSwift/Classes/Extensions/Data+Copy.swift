@@ -16,16 +16,13 @@
  * 
  */
 
-import UIKit
+import Foundation
 
-class ViewController: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+extension Data {
+    /// Copy of Data to the (but not including) the specified size
+    /// - Parameters:
+    ///     - size: The max value of a range (but not included) that should be copied
+    func copyOf(size: Int) -> Data {
+        self[0..<size]
     }
 }
