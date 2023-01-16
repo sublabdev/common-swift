@@ -19,7 +19,7 @@
 import Foundation
 
 /// A Data converter to hex-encoded String
-public class DataHex {
+public final class DataHex {
     private let data: Data
     
     /// Creates a Data converter to hex-encoded String

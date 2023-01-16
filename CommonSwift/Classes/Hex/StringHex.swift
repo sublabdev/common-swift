@@ -20,7 +20,7 @@ import BigInt
 import Foundation
 
 /// A hex-encoded String to Data converter object
-public class StringHex {
+public final class StringHex {
     enum Error: Swift.Error {
         case hexLengthInvalid
         case hexSymbolInvalid
