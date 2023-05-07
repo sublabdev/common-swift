@@ -28,10 +28,22 @@ Our goal is to have more developers to come into the world of development of cli
 
 ## Installation
 
+### CocoaPods
+
 [CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate Alamofire into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
 pod 'CommonSwift'
+```
+
+### Swift Package Manager
+
+The [Swift Package Manager](https://swift.org/package-manager/) is a tool for automating the distribution of Swift code and is integrated into the `swift` compiler.
+
+Once you have your Swift package set up, adding CommonSwift as a dependency is as easy as adding it to the `dependencies` value of your `Package.swift`.
+
+```swift
+.package(url: "https://github.com/sublabdev/common-swift.git", from: "1.0.0")
 ```
 
 ## Documentation

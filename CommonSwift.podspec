@@ -7,6 +7,9 @@ Pod::Spec.new do |s|
   s.author           = { 'Substrate Laboratory LLC' => 'info@sublab.dev' }
   s.source           = { :git => 'https://github.com/sublabdev/common-swift.git', :tag => s.version.to_s }
   s.ios.deployment_target = '13.0'
-  s.source_files = 'CommonSwift/Classes/**/*'
-  s.dependency 'BigInt', '~> 5.0.0'
+  s.osx.deployment_target = '10.15'
+  s.watchos.deployment_target = '6.0'
+  s.tvos.deployment_target = '13.0'
+  s.source_files = 'Sources/CommonSwift/**/*'
+  s.dependency 'BigInt', '5.0.0'
 end
