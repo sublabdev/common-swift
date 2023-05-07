@@ -7,7 +7,7 @@
 
 </div>
 
-[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/common-swift)](https://img.shields.io/cocoapods/v/common-swift)
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/CommonSwift)](https://img.shields.io/cocoapods/v/CommonSwift)
 [![Swift](https://img.shields.io/badge/Swift-5.0.0-orange?style=flat-square)](https://img.shields.io/badge/Swift-5.0.0-Orange?style=flat-square)
 [![Telegram channel](https://img.shields.io/badge/chat-telegram-green.svg?logo=telegram)](https://t.me/sublabsupport)
 [![GitHub License](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0)
