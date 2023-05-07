@@ -1,7 +1,7 @@
 PODS:
   - BigInt (5.0.0)
   - CommonSwift (1.0.0):
-    - BigInt (~> 5.0.0)
+    - BigInt (= 5.0.0)
 
 DEPENDENCIES:
   - CommonSwift (from `../`)
@@ -16,7 +16,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   BigInt: 74b4d88367b0e819d9f77393549226d36faeb0d8
-  CommonSwift: 65c577c1b0ce5f9063ecbddff2bfeef4f279de61
+  CommonSwift: ab5d7130e2fef0a3c98e8b8dc4d4c490600108da
 
 PODFILE CHECKSUM: dba4558125af06e4ee9d9af5bb563c7a29195b18
 
